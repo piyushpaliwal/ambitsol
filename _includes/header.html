@@ -1,0 +1,114 @@
+<!-- Header
+		============================================= -->
+<header id="header" class="sticky-style-2">
+
+    <div class="container clearfix">
+
+        <!-- Logo
+				============================================= -->
+        <div id="logo">
+            <a href="{{ 'index.html' | relative_url }}" class="standard-logo"><img
+                    src="{{ "assets/images/logo-ambit.png" | relative_url }}" alt="Ambit Logo"></a>
+            <a href="{{ 'index.html' | relative_url }}" class="retina-logo"><img
+                    src="{{ "assets/images/logo-ambit.png" | relative_url }}" alt="Ambit Logo"></a>
+        </div><!-- #logo end -->
+
+        <ul class="header-extras">
+            <li>
+                <i class="i-plain icon-call nomargin"></i>
+                <div class="he-text">
+                    Call Us
+                    <span><a href="tel:+17869996446">{{site.phone}}</a></span>
+                </div>
+            </li>
+            <li>
+                <i class="i-plain icon-line2-envelope nomargin"></i>
+                <div class="he-text">
+                    Email Us
+                    <span><a href="mailto:{{site.email}}">{{site.email}}</a></span>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+    <div id="header-wrap">
+
+        <!-- Primary Navigation
+				============================================= -->
+        <nav id="primary-menu" class="with-arrows style-2 center">
+
+            <div class="container clearfix">
+
+                <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+                <ul>
+                    <li class="current"><a href="{{ 'index.html' | relative_url}}">
+                            <div>Home</div>
+                        </a></li>
+                    <li><a href="{{ 'about-us.html' | relative_url }}">
+                            <div>Who We Are</div>
+                        </a></li>
+                    <li><a href="#">
+                            <div>What we do</div>
+                        </a>
+                        <ul>
+                            <li><a href="{{ 'accounting.html' | relative_url }}">
+                                    <div>Accounting &amp; Bookkeeping</div>
+                                </a></li>
+                            <li><a href="{{ 'accounts-payable.html' | relative_url }}">
+                                    <div>Accounts Payable &amp; Receivable</div>
+                                </a></li>
+                            <li><a href="{{ 'payroll.html' | relative_url }}">
+                                    <div>Payroll</div>
+                                </a></li>
+                            <li><a href="{{ 'year-end-procedures.html' | relative_url }}">
+                                    <div>Year End Procedures</div>
+                                </a></li>
+                            <li><a href="{{ 'books-cleanup.html' | relative_url }}">
+                                    <div>Books Cleanup</div>
+                                </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ 'how-we-work.html' | relative_url }}">
+                            <div>How We Work</div>
+                        </a>
+                        <ul>
+                            <li><a href="{{ 'how-we-work.html#engagement' | relative_url }}">
+                                    <div>Engagement Models</div>
+                                </a></li>
+                            <li><a href="{{ 'how-we-work.html#secure' | relative_url }}">
+                                    <div>Secure Data Sharing</div>
+                                </a></li>
+                            <li><a href="{{ 'how-we-work.html#process' | relative_url }}">
+                                    <div>Process Flow</div>
+                                </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ 'security.html' | relative_url }}">
+                            <div>Security</div>
+                        </a></li>
+                    <li><a href="{{ 'blog.html' | relative_url }}">
+                            <div>Blog</div>
+                        </a></li>
+                    <li><a href="{{ 'contact.html' | relative_url }}">
+                            <div>Contact</div>
+                        </a></li>
+                </ul>
+
+                <!-- Top Search
+						============================================= -->
+                <div id="top-search">
+                    <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
+                    <form action="search.html" method="get">
+                        <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
+                    </form>
+                </div><!-- #top-search end -->
+
+            </div>
+
+        </nav><!-- #primary-menu end -->
+
+    </div>
+
+</header><!-- #header end -->

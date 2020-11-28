@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{%- include head.html -%}
+
+<body class="stretched">
+    <div class="wrapper" class="clearfix">
+        {%- include topbar.html -%}
+        {%- include header.html -%}
+        {{ content }}
+    </div>
+
+    {%- include footer.html -%}
+    <!-- Go To Top
+	============================================= -->
+    <div id="gotoTop" class="icon-angle-up"></div>
+
+    <!-- External JavaScripts
+	============================================= -->
+    <script src="{{ 'assets/js/jquery.js' | absolute_url }}"></script>
+    <script src="{{ 'assets/js/plugins.js' | absolute_url }}"></script>
+
+    <!-- Footer Scripts
+	============================================= -->
+    <script src="{{ 'assets/js/functions.js' | absolute_url }}"></script>
+</body>
+
+</html>

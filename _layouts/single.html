@@ -1,0 +1,128 @@
+---
+layout: default
+---
+{% assign author = site.authors | where: 'short_name', page.author | first %}
+<!-- Page Title
+		============================================= -->
+<section id="page-title">
+
+    <div class="container clearfix">
+        <h1>Article</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ 'index.html' | relative_url }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ 'blog.html' | relative_url }}">Blog</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{page.title | capitalize | default: "Article Home"}}</li>
+        </ol>
+    </div>
+
+</section><!-- #page-title end -->
+
+<!-- Content
+		============================================= -->
+<section id="content">
+    <div class="content-wrap">
+        <div class="container clearfix">
+
+            <div class="single-post nobottommargin">
+
+                <!-- Single Post
+						============================================= -->
+                <div class="entry clearfix">
+
+                    <!-- Entry Title
+							============================================= -->
+                    <div class="entry-title">
+                        <h2>{{page.title}}</h2>
+                    </div><!-- .entry-title end -->
+
+                    <!-- Entry Meta
+							============================================= -->
+                    <div class="entry-meta clearfix">
+                        <ul>
+                            <li><i class="icon-calendar3"></i> {{page.date | date_to_string }}</li>
+                            <li><a href="#"><i class="icon-user"></i> {{author.name}}</a></li>
+                            <li>
+                                <i class="icon-folder-open"></i>
+                                {% for category in page.categories %}
+                                    <a href="{{  site.baseurl | relative_url }}/category/{{ category }}">{{ category}}</a>
+                                    {% unless forloop.last %},{% endunless %}
+                                {% endfor %}
+                            </li>
+                        </ul>
+                    </div><!-- .entry-meta end -->
+
+                    <!-- Entry Image
+							============================================= -->
+                    <div class="entry-image bottommargin">
+                        <a href="{{ page.url | relative_url }}"><img src="{{ page.image | relative_url }}" alt="Blog Single"></a>
+                    </div><!-- .entry-image end -->
+
+                    <!-- Entry Content
+							============================================= -->
+                    <div class="entry-content notopmargin">
+
+                        {{content}}
+
+                        <!-- Tag Cloud
+								============================================= -->
+                        <div class="tagcloud clearfix bottommargin">
+                            {% for tag in page.tags %}
+                                <a href="#">{{tag}}</a>
+                            {% endfor %}
+                        </div><!-- .tagcloud end -->
+
+                        <div class="clear"></div>
+
+                        <!-- Post Single - Share
+								============================================= -->
+                        <div class="si-share noborder clearfix">
+                            <span>Share this Post:</span>
+                            <div>
+                                <a href="#" class="social-icon si-borderless si-facebook">
+                                    <i class="icon-facebook"></i>
+                                    <i class="icon-facebook"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-twitter">
+                                    <i class="icon-twitter"></i>
+                                    <i class="icon-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-pinterest">
+                                    <i class="icon-pinterest"></i>
+                                    <i class="icon-pinterest"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-gplus">
+                                    <i class="icon-gplus"></i>
+                                    <i class="icon-gplus"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-rss">
+                                    <i class="icon-rss"></i>
+                                    <i class="icon-rss"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-email3">
+                                    <i class="icon-email3"></i>
+                                    <i class="icon-email3"></i>
+                                </a>
+                            </div>
+                        </div><!-- Post Single - Share End -->
+
+                    </div>
+                </div><!-- .entry end -->
+
+                <!-- Post Author Info
+						============================================= -->
+                <div class="card">
+                    <div class="card-header"><strong>Posted by <a href="#">{{author.name}}</a></strong></div>
+                    <div class="card-body">
+                        <div class="author-image">
+                            <img src="{{author.image | relative_url }}" alt="Image" class="rounded-circle">
+                        </div>
+                        {{author.content}}
+                    </div>
+                </div><!-- Post Single - Author End -->
+
+                <div class="line"></div>
+            </div>
+
+        </div>
+    </div>
+</section><!-- #content end -->
