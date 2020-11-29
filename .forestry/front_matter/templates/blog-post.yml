@@ -44,3 +44,14 @@ fields:
     required: false
   label: Tags
   description: Every word will be considered as a tag
+- name: excerpt
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+    min: 75
+  label: Excerpt
+  description: This will be used for SEO. Enter a short description for this post.
