@@ -5,12 +5,42 @@ fields:
 - type: text
   name: layout
   label: layout
-- type: text
-  name: image
-  label: image
+  hidden: true
+  default: single
+  config:
+    required: true
 - type: text
   name: title
-  label: title
-- type: text
-  name: author
-  label: author
+  label: Post Title
+  config:
+    required: true
+    min: 50
+- name: image
+  type: file
+  config:
+    maxSize: 2
+  label: Featured Image
+- name: author
+  type: select
+  default: _authors/nishant.md
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: authors
+      file: 
+      path: 
+  label: Author
+- name: categories
+  type: text
+  config:
+    required: true
+  label: Categories
+  description: Every word will be considered as a category
+- name: tags
+  type: text
+  config:
+    required: false
+  label: Tags
+  description: Every word will be considered as a tag
