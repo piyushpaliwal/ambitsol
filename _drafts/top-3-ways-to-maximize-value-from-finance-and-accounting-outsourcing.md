@@ -1,6 +1,6 @@
 ---
 layout: single
-author: _authors/nishant.md
+author: nishant
 title: Top 3 ways to maximize value from finance and accounting outsourcing
 image: ''
 categories: Remote-Accounting
