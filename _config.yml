@@ -20,12 +20,12 @@
 
 title: Ambit - Accounting Solutions
 email: info@ambitsol.co
-phone: (+1) 786-999-6446
+phone: (+1) 786-866-9559
 description: >- # this means to ignore newlines until "baseurl:"
   Ambit Accounting provides remote staff for Accounting | Bookkeeping | Taxation needs for firms across the US.
   We effortlessly manage your accounts remotely.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ambitsol.co" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 collections:
