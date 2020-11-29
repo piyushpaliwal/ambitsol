@@ -55,3 +55,5 @@ fields:
     min: 75
   label: Excerpt
   description: This will be used for SEO. Enter a short description for this post.
+pages:
+- _posts/top-3-ways-to-maximize-value-from-finance-and-accounting-outsourcing.md
