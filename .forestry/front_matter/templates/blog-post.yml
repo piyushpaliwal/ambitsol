@@ -22,14 +22,15 @@ fields:
   label: Featured Image
 - name: author
   type: select
-  default: _authors/nishant.md
+  default: nishant
   config:
     required: false
-    options: []
+    options:
+    - nishant
     source:
-      type: pages
+      type: simple
       section: authors
-      file: 
+      file: _authors/nishant.md
       path: 
   label: Author
 - name: categories
